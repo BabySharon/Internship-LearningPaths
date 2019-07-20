@@ -27,6 +27,6 @@ deactivate
 ```
 **How virtual environment work**
 
-In a virtual environment the path of the python executable is changed, which are n different directory locations.
+In a virtual environment the path of the python executable is changed, which are in different directory locations.
 
 
