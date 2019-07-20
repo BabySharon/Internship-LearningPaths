@@ -3,7 +3,8 @@
 It is an isolated environment to work on projects more efficently.
 
 **Need**
-To work with different projects using different versions of a module we use virtual environments, in other words, to isolate a project. When new modules are installed they are added to the global working envirnment by default, pointed to by 
+
+To work with different projects using different versions of a module, we use virtual environments, in other words, to isolate a project. When new modules are installed they are added to the global working envirnment by default, pointed to by 
 ```
 import site
 site.getsitepackages()
@@ -25,4 +26,5 @@ To go back to the system environmet
 deactivate
 ```
 **How virtual environment work**
+
 In a virtual environment the path of the python executable is changed. 
