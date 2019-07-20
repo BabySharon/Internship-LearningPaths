@@ -1,4 +1,4 @@
-# Virtual Environment in python
+# Virtual Environment in python3
 
 It is an isolated environment to work on projects more efficently.
 
