@@ -29,4 +29,25 @@ deactivate
 
 In a virtual environment the path of the python executable is changed, which are in different directory locations.
 
+**Python Requiremnts.txt**
+
+It is a text file that conatins the name and versions of all the python packages that are needed to run a project. Using this file it becomes easy to install all the packages for a project in a single line command and also to keep track of the versions of different packages.
+
+To  see all the packages installed:
+```
+pip3 freeze
+```
+To store the results of the above command into requirements.txt:
+```
+pip3 freeze > requirements.txt
+```
+To count the packages:
+```
+pip3 freeze | wc -l
+```
+To install all the packages in one go, usually a handy procedure when usuing virtual environments:
+```
+pip3 install -r requiremnts.txt
+```
+
 
