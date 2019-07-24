@@ -20,16 +20,24 @@
  ```
  django-admin startapp app_name
  ```
- An app will have files like - urls.py --> For mapping the views to a url - regex expressions may be used
-                               views.py --> Views are python functions that receive an object and sends back a response. Contains                                                                                                                 the logic behind the application(urlpatterns = [path(<url_string>",view,keyword_arguments,name_given_to_url)])
-                               models.py --> For defining entities of the application
-                               migrations/
-                               tests.py
-                               admin.py
+ An app will have files like - 
+ 
+ urls.py --> For mapping the views to a url - regex expressions may be used
+ 
+ views.py --> Views are python functions that receive an object and sends back a response. Contains                                                                                                                 the logic behind the application(urlpatterns = [path(<url_string>",view,keyword_arguments,name_given_to_url)])
+ 
+ models.py --> For defining entities of the application
+ 
+ migrations/
+ 
+ tests.py
+ 
+ admin.py
                                
                                
                                
 lsof -i:<port_number> -->  To find which process is listening upon that port
+
 In a module __ name__ global variable has the module name
 
  
