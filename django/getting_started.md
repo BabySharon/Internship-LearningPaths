@@ -30,15 +30,32 @@
  
  migrations/
  
- tests.py
+ tests.py - 
  
  admin.py
                                
-                               
+ -----------------------------------------------------------------------------                            
                                
 lsof -i:<port_number> -->  To find which process is listening upon that port
 
 In a module __ name__ global variable has the module name
+
+------------------------------------------------------------------------------
+
+**PART II**
+
+* Models - representation of database layout. All models are subclasses of django.db.models.Model class. A User moodel is defined by default in django.contrib.auth.models . The fields can be CharField, DateTimeField... etc. For CharField the length of the text iss predefined while for TextField it can take in unlimited text. The field types can have parameters like max_lenght, unique...etc for setting up special properties. 
+* Primary key will be automatically set up Django if not manually given
+* __Migrating__ means to propagate the changes made into models in models.py to the database.
+```
+python manage.py makemigrations <app_name>
+```
+This command will create a migration file that conatains depndencies and operations. After any change to the models, upon execution of this command, a new migaration file is generated. These files implement the rollback operarion if we need to go back to a previous version of model layout.
+```
+python manage.py migrate
+```
+This will apply the changes to the database.
+
 
  
  
