@@ -42,7 +42,7 @@ In a module __ name__ global variable has the module name
 
 ------------------------------------------------------------------------------
 
-**PART II - MODELS, TEMPLATES**
+**PART II - MODELS, TEMPLATES, STATIC FILES, DJANGO ADMIN**
 
 * Models - representation of database layout. All models are subclasses of django.db.models.Model class. A User moodel is defined by default in django.contrib.auth.models . The fields can be CharField, DateTimeField... etc. For CharField the length of the text iss predefined while for TextField it can take in unlimited text. The field types can have parameters like max_lenght, unique...etc for setting up special properties. Every models/tables are written in the form of classes.
 * Primary key will be automatically set up Django if not manually given
@@ -74,7 +74,23 @@ To create an object in this console, suppose the classname/modelname is Board wi
  
  *Board.objects.get(name='Django')* --> Returns those objects whose name is "Django"
 
+**TEMPLATES**
 
+All the html files are usually stored in the templates directory of project directory. In the settings.py the path to the templates has to be updated. Django Template Language is used to pass values from the views to html files.[eg. {{varible}}, {% statements %}]. Templates are render as:
+
+*return render(request, 'home.html', {'boards': boards})*   i,e by using the render class fron django.shortcuts. Here boards is value to be passed to the html file home.html.
+
+**STATIC FILES**
+
+Static files include js,css ..etc like files. These are usually stored in static/ in the project directory. The path to this folder has to be updated in settings.py
+
+**DJANGO ADMIN**
+
+Django provides an admin page through which an admin can handle the data insertion, updation, deletion ..etc in an easier way. Django comes with this admin app installed in the project. To create an admin or super user:
+```
+python manage.py createsuperuser
+```
+Then the username and password is set.
  
  
             
