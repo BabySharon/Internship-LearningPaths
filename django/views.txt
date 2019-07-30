@@ -1,0 +1,38 @@
+﻿						VIEWS
+
+Web pages and other content are delivered by views. Each view(each web page) is represented by a Python function. Choosing a view is based on url. URLconf module map url to a view.
+
+Writing views
+def <view_name>(arguments):
+	body
+After wriying views add the path to tthe views in urls,py, in the urlpatterns list.
+
+urlpatterns = [path(‘ <url>‘,  views.<function_name>, kwargs, name = ‘ ’)
+]
+‘name’ is the name of the url i,e the string that can be used instead of the long url in the application code.
+Eg: path(‘<int : arg_name/>’, views.check)
+
+A view should return an HttpResponse object that contains the content for the requested page.
+
+The template directory should have templates placed inside each app_directories in order t oavoid a confusion.
+
+render() shortcut
+render(request_object, template name, conetxt) --> returns a HttpResponse object in the given context. In render() conetxt is a dictionary mapping variable names to variable values in the template.
+
+Use try...except in the view whenever neccessary so that the error might have occured is dealt somehow.
+
+	try:
+		...............
+		...............
+	except     model_name.DoesNotExist:
+		raise Http404(“error_mssg”)
+
+get_object_or_404 --> takes django model as first argument , raises Http404 if object does not exists.
+
+Removing hardcoded urls is recommended as then, the changing of urls will be easy. This is done using the name of url defined in UrlConf. The {% url%} template tag is used for the same. The urlnames are namespaced by adding an appname in the UrlConf.
+Then, {% url ‘app_name:urlname ’%}
+
+
+
+
+		
