@@ -1,0 +1,30 @@
+﻿					          PART IV 
+Some build-in template tags in DTL
+
+{% for obj in list reversed %} - to loop over the reversed list
+{% for x,y in list %} - to loop over a list of lists
+{% for  -------- %}---{% empty %} - In empty clause statements to be executed if the iterating data 					 structure is empty, is written
+
+* When using a dictionary, if there are key values like items, values, keys, then the dictionary keylookup takes precedence over method lookup, when dot operatoris used.
+data[‘items’] wll be returned instead of data.items() or such methods.
+
+For loop serts a number of variables available within the loop:
+forloop.counter – Current iteration of the loop from 1’
+forloop.counter 0 – Current iteration of the loop from 0’
+forloop.first – True if this is the first time through the loop
+forloop.last - True if this is the last time through the loop
+
+include – to include other templates within a template
+ifchanged – used witin a loop to display the value if changed from the previous state
+now – to display current date or timebo
+url – returns absolute path reference to the given url-name
+csrf_token – for protection aganist Cross Site Request Forgeries
+
+
+
+
+
+
+
+
+
