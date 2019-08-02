@@ -1,4 +1,7 @@
 ﻿					          PART IV 
+
+TEMPLATES
+
 Some build-in template tags in DTL
 
 {% for obj in list reversed %} - to loop over the reversed list
@@ -19,6 +22,16 @@ ifchanged – used witin a loop to display the value if changed from the previou
 now – to display current date or timebo
 url – returns absolute path reference to the given url-name
 csrf_token – for protection aganist Cross Site Request Forgeries
+
+FORMS
+
+GET method supports only string datatypes because values are displayed in the url while POST supports many. GET helps to bookmark results.
+
+CSRF
+
+It is a web application threat in which the attacker tricks the victim to perform an action which is not intended. This is done through social engineering. One such method is, if the form method is GET, then the form values appear in the url, which will be stored in the logs. This can be accessed by the attacker.
+
+{% csrf_token %} used inside the form elemnt targeting internal url.
 
 
 
