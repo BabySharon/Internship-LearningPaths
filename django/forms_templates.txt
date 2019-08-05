@@ -29,11 +29,22 @@ GET method supports only string datatypes because values are displayed in the ur
 
 CSRF
 
-It is a web application threat in which the attacker tricks the victim to perform an action which is not intended. This is done through social engineering. One such method is, if the form method is GET, then the form values appear in the url, which will be stored in the logs. This can be accessed by the attacker.
+It is a web application threat in which the attacker tricks the victim to perform an action which is not intended. It refers to attempts to send requests from an external site while pretending to be from the origin application.Django protects against CSRF attacks by generating a CSRF token in the server, send it to the client side, and mandating the client to send the token back in the request header. The server will then verify if the token from client is the same as the one generated previously; if not it will not authorise the request. Attackers won’t be able to access this token due to protection by the Same Origin Policy.This is done through social engineering. One such method is, if the form method is GET, then the form values appear in the url, which will be stored in the logs. This can be accessed by the attacker.
 
-{% csrf_token %} used inside the form elemnt targeting internal url.
+{% csrf_token %} used inside the form elemnt for providing protection.
+
+REDIRECTION
+
+Redirecting the user to another url by returning an instance of HttpResponseRedirect class. 
+Eg: redirection is used when the user is not logged in, but requests a url that needs authentication
+reverse() function is used to avoid hardcoding the urls.
+
+The redirect() shortcut can also be used to redirect urls.
 
 
+GENERIC VIEWS
+
+Unlike classic views, generic views are classes not functions.
 
 
 
